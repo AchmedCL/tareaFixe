@@ -1,0 +1,20 @@
+<div class="container">
+<table class="table">
+
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">url</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pokemon of pokemones; index as i">
+        <th scope="row">{{i+1}}</th>
+        <td>{{pokemon}}</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
