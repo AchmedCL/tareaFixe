@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "TareaFixePokemon"
+  "defaultProject": "TareaFixePokemon",
+  "cli": {
+    "analytics": "a5945569-88f0-42d0-a15a-cbb42ea707de"
+  }
 }
