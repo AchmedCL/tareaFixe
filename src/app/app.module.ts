@@ -16,7 +16,7 @@ import { AddPokemonEncontradoComponent } from './components/add-pokemon-encontra
 import { PokemonEncontradosComponent } from './components/pokemon-encontrados/pokemon-encontrados.component';
 import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { FormsModule } from '@angular/forms';
 
 const routes:Routes = [
   { path: 'buscarPokemon', component: BuscarPokemonComponent},
@@ -41,7 +41,8 @@ const routes:Routes = [
     AppRoutingModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [
     PokemonService
