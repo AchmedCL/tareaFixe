@@ -9,10 +9,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let pokemon of pokemones; index as i">
-        <th scope="row">{{i+1}}</th>
-        <td>{{pokemon}}</td>
-        <td></td>
+      <tr *ngFor="let pokemon of pokemones">
+        <th scope="row">{{pokemon.id}}</th>
+        <td>{{pokemon.nombre}}</td>
+        <td>{{pokemon.url}}
+        </td>
         <td></td>
       </tr>
     </tbody>

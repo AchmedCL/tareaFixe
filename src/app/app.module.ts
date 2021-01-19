@@ -15,6 +15,7 @@ import { BuscarPokemonComponent } from './components/buscar-pokemon/buscar-pokem
 import { AddPokemonEncontradoComponent } from './components/add-pokemon-encontrado/add-pokemon-encontrado.component';
 import { PokemonEncontradosComponent } from './components/pokemon-encontrados/pokemon-encontrados.component';
 import { HomeComponent } from './components/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 const routes:Routes = [
@@ -39,7 +40,8 @@ const routes:Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [
     PokemonService
