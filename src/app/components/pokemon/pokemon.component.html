@@ -1,21 +1,23 @@
 <div class="container">
 <table class="table">
-
-    <thead>
-      <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Nombre</th>
-        <th scope="col">url</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let pokemon of pokemones">
-        <th scope="row">{{pokemon.id}}</th>
-        <td>{{pokemon.nombre}}</td>
-        <td>{{pokemon.url}}
-        </td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <thead>
+     <tr>
+       <th scope="col">Id</th>
+       <th scope="col">Nombre</th>
+       <th scope="col">Abilities</th>
+       <th scope="col">Base Stats</th>
+       <th scope="col">Foto/shiny</th>
+     </tr>
+   </thead>    
+   <tbody *ngFor="let pokemon of pokemones;index as i">
+     <tr >
+       <th scope="row">{{pokemon.id}}</th>
+       <td >{{pokemon.nombre}}</td>
+       <td >{{pokemon.ability}}<!-- /  hidden: {{pokemon.hiddenAbility}} --></td>
+       <td >hp: {{pokemon.hpStat}} <br>ataque: {{pokemon.atkStat}} <br>Defensa: {{pokemon.defStat}} <br>
+       Ataque especial: {{pokemon.spAtkStat}} <br>Defensa especial: {{pokemon.spDefStat}} <br>Velocidad: {{pokemon.speedStat}}</td>
+       <td ><img src={{pokemon.frontSprite}}> <img src={{pokemon.shinyFrontSprite}}></td>
+     </tr>
+   </tbody>
+ </table> 
 </div>

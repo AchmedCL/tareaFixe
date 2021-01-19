@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "tareafixea": {
+      "hosting": {
+        "TareaFixePokemon": [
+          "tareafixea"
+        ]
+      }
+    }
+  }
+}

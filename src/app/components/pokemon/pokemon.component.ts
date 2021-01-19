@@ -14,14 +14,24 @@ export class PokemonComponent implements OnInit {
   {
     for(var i:number=1;i<151;i++){
       this.pokemonservice.getPokemones(i).subscribe(resp =>{
+        
         let dataPokemon = {
           id: resp.id,  
           nombre: resp.name,
-          url: resp.forms[0].url
+          ability: resp.abilities[0].ability.name,
+          //hiddenAbility: resp.abilities[1].ability.name,
+          hpStat: resp.stats[0].base_stat,
+          atkStat: resp.stats[1].base_stat,
+          defStat: resp.stats[2].base_stat,
+          spAtkStat: resp.stats[3].base_stat,
+          spDefStat: resp.stats[4].base_stat,
+          speedStat: resp.stats[5].base_stat,
+          frontSprite: resp.sprites.front_default,
+          shinyFrontSprite: resp.sprites.front_shiny
         }
+      
         this.pokemones.push(dataPokemon)
-        //console.log(this.pokemones.push(resp))
-        //console.log(this.pokemones)
+      
       })
     }
   }
