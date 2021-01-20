@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PokemonService } from 'src/app/services/pokemon.service';
+import { ConexionService } from 'src/app/services/conexion.service';
+//import { PokemonService } from 'src/app/services/pokemon.service';
 
 @Component({
   selector: 'app-pokemon-encontrados',
@@ -9,12 +10,25 @@ import { PokemonService } from 'src/app/services/pokemon.service';
 export class PokemonEncontradosComponent implements OnInit {
   
   public pokemonesEncontrados: Array<any> = []
-
-  constructor(private pokemonservice: PokemonService) { }
+  items:any;
+  constructor(/*private pokemonservice: PokemonService,*/ private conexion:ConexionService)
+  {
+    this.conexion.listaItem().subscribe(item=>{
+      this.items = item;
+      console.log(this.items);
+      
+    })
+  }
 
   ngOnInit(): void {
   }
-  addPokemon(pokemon:any){
+
+
+
+
+
+
+  /*addPokemon(pokemon:any){
   this.pokemonservice.getPokemones(pokemon).subscribe(resp =>{
         console.log("hola")
     let dataPokemon = {
@@ -35,6 +49,6 @@ export class PokemonEncontradosComponent implements OnInit {
     this.pokemonesEncontrados.push(dataPokemon)
     
   })
-}
+  }*/
 }
 

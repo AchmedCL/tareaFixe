@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConexionService } from 'src/app/services/conexion.service';
 
 @Component({
   selector: 'app-add-pokemon-encontrado',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddPokemonEncontradoComponent implements OnInit {
 
-  constructor() { }
+  pokemon:any = {
+    name: ''
+  }
+  constructor( private servicio:ConexionService) { }
 
   ngOnInit(): void {
   }
-
+  agregar()
+  {
+    this.servicio.addItem(this.pokemon);
+  }
 }
