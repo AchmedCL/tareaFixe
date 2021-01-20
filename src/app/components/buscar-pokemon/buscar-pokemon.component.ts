@@ -21,7 +21,7 @@ export class BuscarPokemonComponent implements OnInit {
         id: resp.id,  
         nombre: resp.name,
         ability: resp.abilities[0].ability.name,
-        hiddenAbility: resp.abilities[1].ability.name,
+        //hiddenAbility: resp.abilities[1].ability.name,
         hpStat: resp.stats[0].base_stat,
         atkStat: resp.stats[1].base_stat,
         defStat: resp.stats[2].base_stat,

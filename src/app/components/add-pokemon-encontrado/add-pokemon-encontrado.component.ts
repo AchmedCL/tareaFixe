@@ -9,7 +9,7 @@ import { ConexionService } from 'src/app/services/conexion.service';
 export class AddPokemonEncontradoComponent implements OnInit {
 
   pokemon:any = {
-    name: ''
+    nombre: ''
   }
   constructor( private servicio:ConexionService) { }
 
